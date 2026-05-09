@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Download FEECENT Banking App</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #6b21a8 0%, #4c1d95 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .download-container {
+        max-width: 500px;
+        width: 100%;
+        background: white;
+        border-radius: 24px;
+        padding: 40px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        animation: fadeIn 0.5s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .logo {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #6b21a8 0%, #4c1d95 100%);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+      }
+
+      .logo i {
+        font-size: 48px;
+        color: white;
+      }
+
+      h1 {
+        color: #1e293b;
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      .version {
+        color: #64748b;
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+
+      .features {
+        text-align: left;
+        margin: 30px 0;
+        padding: 20px;
+        background: #f8fafc;
+        border-radius: 16px;
+      }
+
+      .features h3 {
+        color: #1e293b;
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+
+      .features ul {
+        list-style: none;
+      }
+
+      .features li {
+        margin: 12px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #475569;
+      }
+
+      .features li i {
+        color: #10b981;
+        font-size: 18px;
+        width: 24px;
+      }
+
+      .download-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background: linear-gradient(135deg, #6b21a8 0%, #4c1d95 100%);
+        color: white;
+        text-decoration: none;
+        padding: 16px 32px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: 600;
+        transition: all 0.3s;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .download-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(107, 33, 168, 0.3);
+      }
+
+      .download-btn:active {
+        transform: translateY(0);
+      }
+
+      .download-btn i {
+        font-size: 24px;
+      }
+
+      .android-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #1e293b;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 12px;
+        margin-top: 15px;
+      }
+
+      .note {
+        font-size: 12px;
+        color: #94a3b8;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #e2e8f0;
+      }
+
+      .warning {
+        background: #fef3c7;
+        color: #92400e;
+        padding: 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        margin-top: 15px;
+      }
+
+      .warning i {
+        margin-right: 8px;
+      }
+
+      @media (max-width: 480px) {
+        .download-container {
+          padding: 30px 20px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+
+        .download-btn {
+          padding: 14px 24px;
+          font-size: 16px;
+        }
+      }
+    </style>  
+  </head>
+  <body>
+    <div class="download-container">
+      <div class="logo">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+
+      <h1>FEECENT Banking</h1>
+      <div class="version">Version 1.0.0 • Android 6.0+</div>
+
+      <p style="color: #475569; margin-bottom: 20px">
+        Secure, fast, and reliable mobile banking at your fingertips
+      </p>
+
+      <div class="features">
+        <h3>✨ Features</h3>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Secure money transfers</li>
+          <li><i class="fas fa-check-circle"></i> Bill payments & airtime</li>
+          <li>
+            <i class="fas fa-check-circle"></i> Savings plans & investments
+          </li>
+          <li>
+            <i class="fas fa-check-circle"></i> Face verification security
+          </li>
+          <li><i class="fas fa-check-circle"></i> 24/7 customer support</li>
+          <li>
+            <i class="fas fa-check-circle"></i> Instant transaction alerts
+          </li>
+        </ul>
+      </div>
+
+      <!-- Download Button - Replace URL with your actual file link -->
+      <a href="#" id="downloadLink" class="download-btn" download>
+        <i class="fab fa-android"></i>
+        Download APK (38 MB)
+      </a>
+
+      <div class="android-badge">
+        <i class="fab fa-android"></i>
+        <span>Requires Android 6.0 or higher</span>
+      </div>
+
+      <div class="warning" id="installGuide" style="display: none">
+        <i class="fas fa-shield-alt"></i>
+        <strong>Security Check:</strong> Go to Settings → Security → Enable
+        "Unknown Sources" to install
+      </div>
+
+      <div class="note">
+        <i class="fas fa-lock"></i> Secure banking • Bank-level encryption
+      </div>
+    </div>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script>
+      // Replace this with your actual APK download URL
+      // OPTION 1: If APK is in same folder as this HTML
+      const APK_PATH = "FEECENT-Bank-v1.0.apk";
+
+      // OPTION 2: If using Google Drive (get direct download link)
+      // Google Drive direct link format:
+      // https://drive.google.com/uc?export=download&id=YOUR_FILE_ID
+
+      // OPTION 3: If using server hosting
+      // const APK_PATH = "https://yourdomain.com/downloads/FEECENT-Bank-v1.0.apk";
+
+      const downloadBtn = document.getElementById("downloadLink");
+      const installGuide = document.getElementById("installGuide");
+
+      // Set the download link
+      downloadBtn.href = APK_PATH;
+
+      // Show install guide on click
+      downloadBtn.addEventListener("click", function (e) {
+        // Show install guide after 1 second
+        setTimeout(function () {
+          installGuide.style.display = "block";
+        }, 1000);
+
+        // Hide guide after 5 seconds
+        setTimeout(function () {
+          installGuide.style.display = "none";
+        }, 6000);
+      });
+
+      // Check if file exists (optional)
+      fetch(APK_PATH, { method: "HEAD" })
+        .then((response) => {
+          if (!response.ok) {
+            console.warn("APK file not found at:", APK_PATH);
+            downloadBtn.href = "#";
+            downloadBtn.style.opacity = "0.7";
+            downloadBtn.innerHTML =
+              '<i class="fas fa-exclamation-triangle"></i> File Not Found - Contact Admin';
+          } else {
+            const size = response.headers.get("Content-Length");
+            if (size) {
+              const mb = (size / 1024 / 1024).toFixed(1);
+              downloadBtn.innerHTML = `<i class="fab fa-android"></i> Download APK (${mb} MB)`;
+            }
+          }
+        })
+        .catch(() => {
+          console.log(
+            "Cannot verify file existence - ensure APK is in the same folder",
+          );
+        });
+    </script>
+  </body>
+</html>
