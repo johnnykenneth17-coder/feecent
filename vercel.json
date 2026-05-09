@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "*.apk",
+      "source": "/.*\\.apk$",
       "headers": [
         {
           "key": "Content-Type",
@@ -9,7 +9,7 @@
         },
         {
           "key": "Content-Disposition",
-          "value": "attachment; filename=FEECENT-Bank.apk"
+          "value": "attachment"
         }
       ]
     }
