@@ -1,0 +1,1203 @@
+<!-- terms.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--<meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />-->
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=yes"
+    />
+    <title>Terms of Service - FEECENT Payment Services</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./CSS/main.css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: #f8fafc;
+        color: #1e293b;
+        line-height: 1.6;
+      }
+
+      /* Header */
+      .legal-header {
+        background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+        color: white;
+        padding: 60px 0 40px;
+        text-align: center;
+      }
+
+      .legal-header .logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .legal-header .logo i {
+        font-size: 32px;
+        color: #8b5cf6;
+      }
+
+      .legal-header h1 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        margin-top: 36px;
+      }
+
+      .legal-header p {
+        color: #94a3b8;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .last-updated {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #64748b;
+      }
+
+      /* Container */
+      .legal-container {
+        max-width: 1200px;
+        margin: -30px auto 60px;
+        padding: 0 24px;
+      }
+
+      /* Navigation Tabs */
+      .legal-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
+
+      .legal-tab {
+        padding: 12px 28px;
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 40px;
+        text-decoration: none;
+        color: #64748b;
+        font-weight: 500;
+        transition: all 0.3s;
+      }
+
+      .legal-tab.active {
+        background: #6c47ff;
+        border-color: #6c47ff;
+        color: white;
+      }
+
+      .legal-tab:hover:not(.active) {
+        border-color: #6c47ff;
+        color: #6c47ff;
+      }
+
+      /* Content Cards */
+      .legal-card {
+        background: white;
+        border-radius: 24px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        margin-bottom: 30px;
+      }
+
+      .legal-card-header {
+        padding: 30px 40px 0;
+        border-bottom: 2px solid #f1f5f9;
+      }
+
+      .legal-card-header h2 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #0f172a;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .legal-card-header h2 i {
+        color: #6c47ff;
+        font-size: 28px;
+      }
+
+      .legal-card-body {
+        padding: 30px 40px;
+      }
+
+      /* Section Styles */
+      .legal-section {
+        margin-bottom: 32px;
+      }
+
+      .legal-section h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #0f172a;
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #e2e8f0;
+      }
+
+      .legal-section p {
+        margin-bottom: 16px;
+        color: #334155;
+      }
+
+      .legal-section ul,
+      .legal-section ol {
+        margin: 16px 0 16px 24px;
+        color: #334155;
+      }
+
+      .legal-section li {
+        margin-bottom: 8px;
+      }
+
+      /* Highlight Box */
+      .highlight-box {
+        background: #f8fafc;
+        border-left: 4px solid #6c47ff;
+        padding: 20px 24px;
+        border-radius: 12px;
+        margin: 24px 0;
+      }
+
+      .highlight-box.warning {
+        border-left-color: #ef4444;
+        background: #fef2f2;
+      }
+
+      .highlight-box.success {
+        border-left-color: #10b981;
+        background: #f0fdf4;
+      }
+
+      /* Table */
+      .legal-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+
+      .legal-table th,
+      .legal-table td {
+        padding: 12px 16px;
+        text-align: left;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .legal-table th {
+        background: #f8fafc;
+        font-weight: 600;
+        color: #0f172a;
+      }
+
+      /* Footer */
+      .legal-footer {
+        background: #0f172a;
+        color: #94a3b8;
+        padding: 40px 24px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .legal-footer a {
+        color: #8b5cf6;
+        text-decoration: none;
+      }
+
+      .legal-footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Back to top */
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #6c47ff;
+        color: white;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        box-shadow: 0 4px 12px rgba(108, 71, 255, 0.3);
+        transition: all 0.3s;
+        z-index: 100;
+      }
+
+      .back-to-top:hover {
+        background: #5a3ad1;
+        transform: translateY(-3px);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .legal-header {
+          padding: 40px 20px;
+        }
+        .legal-header h1 {
+          font-size: 28px;
+        }
+        .legal-card-header,
+        .legal-card-body {
+          padding: 20px;
+        }
+        .legal-tabs {
+          gap: 10px;
+        }
+        .legal-tab {
+          padding: 8px 18px;
+          font-size: 14px;
+        }
+        .back-to-top {
+          bottom: 20px;
+          right: 20px;
+        }
+      }
+
+      @media print {
+        .legal-header,
+        .legal-tabs,
+        .back-to-top,
+        .legal-footer {
+          display: none;
+        }
+        .legal-container {
+          margin: 0;
+          padding: 0;
+        }
+        .legal-card {
+          box-shadow: none;
+        }
+      }
+
+      /* ========================================
+           EXTREME RESPONSIVE STYLES (280px - 600px)
+           ======================================== */
+
+      /* Base responsive adjustments */
+      @media (max-width: 600px) {
+        /* Header adjustments */
+        .legal-header {
+          padding: 30px 16px 25px;
+        }
+
+        .legal-header .logo {
+          font-size: 22px;
+          gap: 8px;
+        }
+
+        .legal-header .logo i {
+          font-size: 26px;
+        }
+
+        .legal-header h1 {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+
+        .legal-header p {
+          font-size: 13px;
+          padding: 0 12px;
+        }
+
+        .last-updated {
+          font-size: 11px;
+          margin-top: 12px;
+        }
+
+        /* Container padding */
+        .legal-container {
+          padding: 0 12px;
+          margin: -20px auto 40px;
+        }
+
+        /* Tabs - make them full width on very small screens */
+        .legal-tabs {
+          gap: 8px;
+          margin-bottom: 20px;
+          flex-wrap: wrap;
+        }
+
+        .legal-tab {
+          padding: 8px 16px;
+          font-size: 12px;
+          flex: 0 0 auto;
+        }
+
+        /* For screens 400px and below - make tabs stack vertically */
+        @media (max-width: 400px) {
+          .legal-tabs {
+            flex-direction: column;
+            gap: 8px;
+          }
+          .legal-tab {
+            text-align: center;
+            width: 100%;
+          }
+        }
+
+        /* Card styling */
+        .legal-card {
+          border-radius: 16px;
+          margin-bottom: 16px;
+        }
+
+        .legal-card-header {
+          padding: 18px 16px 0;
+        }
+
+        .legal-card-header h2 {
+          font-size: 18px;
+          gap: 8px;
+        }
+
+        .legal-card-header h2 i {
+          font-size: 20px;
+        }
+
+        .legal-card-body {
+          padding: 18px 16px;
+        }
+
+        /* Section adjustments */
+        .legal-section {
+          margin-bottom: 20px;
+        }
+
+        .legal-section h3 {
+          font-size: 16px;
+          margin-bottom: 12px;
+        }
+
+        .legal-section p {
+          font-size: 13px;
+          margin-bottom: 12px;
+          line-height: 1.55;
+        }
+
+        .legal-section ul,
+        .legal-section ol {
+          margin: 12px 0 12px 18px;
+        }
+
+        .legal-section li {
+          font-size: 13px;
+          margin-bottom: 6px;
+          line-height: 1.5;
+        }
+
+        /* Highlight boxes */
+        .highlight-box {
+          padding: 14px 16px;
+          margin: 16px 0;
+          font-size: 13px;
+        }
+
+        .highlight-box i {
+          font-size: 14px;
+        }
+
+        /* Data grid - responsive cards */
+        .data-grid {
+          grid-template-columns: 1fr;
+          gap: 12px;
+          margin: 16px 0;
+        }
+
+        .data-card {
+          padding: 14px;
+        }
+
+        .data-card h4 {
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+
+        .data-card p {
+          font-size: 12px;
+        }
+
+        /* Table responsiveness */
+        .legal-table {
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap;
+          font-size: 12px;
+          margin: 16px 0;
+        }
+
+        .legal-table th,
+        .legal-table td {
+          padding: 8px 10px;
+          font-size: 11px;
+        }
+
+        /* Footer */
+        .legal-footer {
+          padding: 30px 16px;
+          font-size: 11px;
+        }
+
+        .legal-footer p {
+          margin-bottom: 8px;
+          line-height: 1.5;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+          width: 40px;
+          height: 40px;
+          bottom: 16px;
+          right: 16px;
+        }
+
+        .back-to-top i {
+          font-size: 16px;
+        }
+      }
+
+      /* Extra small devices (320px - 375px) */
+      @media (max-width: 375px) {
+        .legal-header h1 {
+          font-size: 20px;
+        }
+
+        .legal-card-header h2 {
+          font-size: 16px;
+          flex-wrap: wrap;
+        }
+
+        .legal-section h3 {
+          font-size: 15px;
+        }
+
+        .legal-section p,
+        .legal-section li,
+        .highlight-box {
+          font-size: 12px;
+        }
+
+        .legal-table th,
+        .legal-table td {
+          padding: 6px 8px;
+          font-size: 10px;
+        }
+      }
+
+      /* Tiny screens (280px - 320px) - Galaxy Fold, etc. */
+      @media (max-width: 320px) {
+        .legal-header {
+          padding: 20px 12px;
+        }
+
+        .legal-header .logo {
+          font-size: 18px;
+        }
+
+        .legal-header .logo i {
+          font-size: 22px;
+        }
+
+        .legal-header h1 {
+          font-size: 18px;
+        }
+
+        .legal-header p {
+          font-size: 11px;
+        }
+
+        .legal-card-header {
+          padding: 14px 12px 0;
+        }
+
+        .legal-card-header h2 {
+          font-size: 15px;
+        }
+
+        .legal-card-body {
+          padding: 14px 12px;
+        }
+
+        .legal-section h3 {
+          font-size: 14px;
+        }
+
+        .legal-section p,
+        .legal-section li,
+        .highlight-box {
+          font-size: 11px;
+        }
+
+        .legal-tab {
+          padding: 6px 12px;
+          font-size: 11px;
+        }
+
+        .highlight-box {
+          padding: 10px 12px;
+        }
+
+        .data-card {
+          padding: 10px;
+        }
+
+        .legal-table th,
+        .legal-table td {
+          padding: 4px 6px;
+          font-size: 9px;
+        }
+
+        .legal-footer {
+          padding: 20px 12px;
+          font-size: 10px;
+        }
+
+        .back-to-top {
+          width: 36px;
+          height: 36px;
+          bottom: 12px;
+          right: 12px;
+        }
+      }
+
+      /* Landscape orientation on mobile */
+      @media (max-width: 600px) and (orientation: landscape) {
+        .legal-header {
+          padding: 20px 16px;
+        }
+
+        .legal-header h1 {
+          font-size: 20px;
+        }
+
+        .legal-container {
+          margin-top: -15px;
+        }
+
+        .legal-card-body {
+          padding: 14px 16px;
+        }
+      }
+
+      /* Touch-friendly improvements for mobile */
+      @media (max-width: 600px) {
+        /* Make buttons and links easier to tap */
+        .legal-tab {
+          min-height: 44px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .back-to-top {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        /* Improve readability */
+        body {
+          font-size: 14px;
+        }
+
+        /* Add subtle borders between sections for better separation */
+        .legal-section:not(:last-child) {
+          border-bottom: 1px solid #f1f5f9;
+          padding-bottom: 16px;
+        }
+
+        /* Fix any overflow issues */
+        .legal-container,
+        .legal-card,
+        .legal-card-body {
+          overflow-x: hidden;
+        }
+
+        /* Make sure tables don't break layout */
+        .legal-table {
+          -webkit-overflow-scrolling: touch;
+        }
+      }
+
+      /* For very small devices with notch/displays */
+      @supports (padding: max(0px)) {
+        @media (max-width: 600px) {
+          .legal-header {
+            padding-left: max(16px, env(safe-area-inset-left));
+            padding-right: max(16px, env(safe-area-inset-right));
+          }
+
+          .legal-container {
+            padding-left: max(12px, env(safe-area-inset-left));
+            padding-right: max(12px, env(safe-area-inset-right));
+          }
+        }
+      }
+
+      /* Print styles - keep as is */
+      @media print {
+        .legal-header,
+        .legal-tabs,
+        .back-to-top,
+        .legal-footer {
+          display: none;
+        }
+        .legal-container {
+          margin: 0;
+          padding: 0;
+        }
+        .legal-card {
+          box-shadow: none;
+          break-inside: avoid;
+        }
+      }
+
+      /* Smooth scrolling for better mobile UX */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Better touch handling */
+      @media (max-width: 600px) {
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        a,
+        button {
+          cursor: pointer;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo"
+          ><i class="fas fa-shield-alt"></i><span>FEECENT</span></a
+        >
+        <div class="nav-links">
+          <a href="index.html">Home</a><a href="features.html">Features</a
+          ><a href="pricing.html">Pricing</a>
+          <a href="security.html">Security</a><a href="support.html">Support</a>
+          <a href="download.html" class="btn btn-primary btn-sm"
+            >Download App</a
+          >
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="legal-header">
+      <!--<div class="logo">
+        <i class="fas fa-shield-alt"></i>
+        <span>FEECENT</span>
+      </div>-->
+      <h1>Terms of Service</h1>
+      <p>
+        Welcome to FEECENT. These terms govern your use of our payment services.
+      </p>
+      <div class="last-updated">
+        <i class="fas fa-calendar-alt"></i> Last Updated: May 20, 2026 | Version
+        2.0
+      </div>
+    </div>
+
+    <div class="legal-container">
+      <div class="legal-tabs">
+        <a href="terms.html" class="legal-tab active">Terms of Service</a>
+        <a href="privacy.html" class="legal-tab">Privacy Policy</a>
+      </div>
+
+      <div class="legal-card">
+        <div class="legal-card-header">
+          <h2><i class="fas fa-file-contract"></i> Agreement to Terms</h2>
+        </div>
+        <div class="legal-card-body">
+          <p>
+            By accessing or using FEECENT's payment services, website, mobile
+            application, or any associated platforms (collectively, the
+            "Service"), you agree to be bound by these Terms of Service
+            ("Terms"). If you do not agree to these Terms, please do not use our
+            Service.
+          </p>
+
+          <div class="highlight-box">
+            <i
+              class="fas fa-gavel"
+              style="color: #6c47ff; margin-right: 12px"
+            ></i>
+            <strong>Important Notice:</strong> FEECENT is a payment service
+            provider, not a bank. We provide payment processing, money transfer,
+            and digital wallet services. Your funds are held in trust accounts
+            with licensed financial institutions.
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-card">
+        <div class="legal-card-header">
+          <h2>
+            <i class="fas fa-user-check"></i> Eligibility & Account Registration
+          </h2>
+        </div>
+        <div class="legal-card-body">
+          <div class="legal-section">
+            <h3>1. Eligibility Requirements</h3>
+            <p>To use FEECENT Services, you must:</p>
+            <ul>
+              <li>Be at least 18 years of age</li>
+              <li>Have legal capacity to enter into a binding agreement</li>
+              <li>
+                Provide accurate, complete, and current registration information
+              </li>
+              <li>Not be located in a restricted jurisdiction</li>
+              <li>Not be listed on any government sanctions list</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h3>2. Account Registration</h3>
+            <p>You must provide:</p>
+            <ul>
+              <li>Full legal name</li>
+              <li>Valid email address</li>
+              <li>Phone number</li>
+              <li>Government-issued identification (for verification)</li>
+              <li>Proof of address (for enhanced verification)</li>
+            </ul>
+            <p>
+              You are responsible for maintaining the confidentiality of your
+              account credentials and for all activities that occur under your
+              account.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h3>3. Verification & KYC</h3>
+            <p>
+              As a regulated payment service provider, we are required to
+              collect, verify, and maintain certain information about our users
+              under Anti-Money Laundering (AML) and Counter-Financing of
+              Terrorism (CFT) regulations. This includes:
+            </p>
+            <ul>
+              <li>Identity verification using government-issued ID</li>
+              <li>Address verification</li>
+              <li>Source of funds verification for large transactions</li>
+              <li>Ongoing transaction monitoring</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-card">
+        <div class="legal-card-header">
+          <h2><i class="fas fa-exchange-alt"></i> Payment Services</h2>
+        </div>
+        <div class="legal-card-body">
+          <div class="legal-section">
+            <h3>1. Services Provided</h3>
+            <p>FEECENT provides the following payment services:</p>
+            <ul>
+              <li>
+                <strong>Money Transfers:</strong> Domestic and international
+                fund transfers
+              </li>
+              <li>
+                <strong>Digital Wallet:</strong> Store and manage funds securely
+              </li>
+              <li>
+                <strong>Bill Payments:</strong> Pay utility bills, airtime, and
+                other services
+              </li>
+              <li>
+                <strong>Savings Plans:</strong> Goal-based savings programs (not
+                deposit accounts)
+              </li>
+              <!--<li>
+                <strong>Card Services:</strong> Virtual and physical payment
+                cards
+              </li>-->
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h3>2. Transaction Limits</h3>
+            <p>Transaction limits apply based on verification level:</p>
+            <table class="legal-table">
+              <thead>
+                <tr>
+                  <th>Verification Level</th>
+                  <th>Daily Limit</th>
+                  <th>Monthly Limit</th>
+                  <th>Single Transaction</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Basic (Tier 1)</td>
+                  <td>₦500,000</td>
+                  <td>₦2,000,000</td>
+                  <td>₦100,000</td>
+                </tr>
+                <tr>
+                  <td>Verified (Tier 2)</td>
+                  <td>₦1,000,000</td>
+                  <td>₦5,000,000</td>
+                  <td>₦500,000</td>
+                </tr>
+                <tr>
+                  <td>Enhanced (Tier 3)</td>
+                  <td>₦5,000,000</td>
+                  <td>₦20,000,000</td>
+                  <td>₦1,000,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="legal-section">
+            <h3>3. Fees & Charges</h3>
+            <p>
+              Our fee structure is transparent and disclosed before each
+              transaction:
+            </p>
+            <ul>
+              <li>
+                <strong>Domestic Transfers:</strong> ₦0 - ₦50 per transaction
+                (free for amounts under ₦10,000)
+              </li>
+              <li>
+                <strong>Bill Payments:</strong> ₦0 - ₦100 depending on service
+              </li>
+              <!--<li>
+                <strong>Card Issuance:</strong> ₦3,000 for virtual cards, ₦5,000
+                for physical cards
+              </li>
+              <li>
+                <strong>Inactivity Fee:</strong> ₦500 per month after 12 months
+                of inactivity
+              </li>-->
+              <!--<li><strong>Card Replacement:</strong> ₦4,000</li>-->
+            </ul>
+            <p>
+              All fees are displayed before you confirm a transaction. We may
+              adjust fees with 30 days' notice.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-card">
+        <div class="legal-card-header">
+          <h2><i class="fas fa-shield-alt"></i> Security & Fraud Prevention</h2>
+        </div>
+        <div class="legal-card-body">
+          <div class="legal-section">
+            <h3>1. Your Responsibilities</h3>
+            <p>You are responsible for:</p>
+            <ul>
+              <li>Keeping your login credentials confidential</li>
+              <li>Enabling two-factor authentication (2FA)</li>
+              <li>Using strong, unique passwords</li>
+              <li>Not sharing OTP codes with anyone</li>
+              <li>Immediately reporting unauthorized transactions</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h3>2. Our Security Measures</h3>
+            <p>We implement industry-standard security measures including:</p>
+            <ul>
+              <li>256-bit encryption for all data transmission</li>
+              <li>Biometric authentication options</li>
+              <li>Real-time fraud monitoring</li>
+              <li>PCI DSS compliant card processing</li>
+              <li>Regular security audits and penetration testing</li>
+            </ul>
+          </div>
+
+          <div class="highlight-box warning">
+            <i class="fas fa-exclamation-triangle" style="color: #ef4444"></i>
+            <strong>Never share your OTP, PIN, or password.</strong> FEECENT
+            will NEVER ask for your password or full OTP. Any such request is
+            fraudulent.
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-card">
+        <div class="legal-card-header">
+          <h2><i class="fas fa-ban"></i> Prohibited Activities</h2>
+        </div>
+        <div class="legal-card-body">
+          <p>You may not use FEECENT Services for:</p>
+          <ul>
+            <li>
+              <strong>Illegal Activities:</strong> Money laundering, fraud,
+              terrorism financing, or any unlawful purpose
+            </li>
+            <li>
+              <strong>Gambling:</strong> Transactions related to unlicensed
+              gambling operations
+            </li>
+            <li>
+              <strong>Adult Content:</strong> Payments for adult entertainment
+              or services
+            </li>
+            <li>
+              <strong>Drugs & Paraphernalia:</strong> Any transactions involving
+              controlled substances
+            </li>
+            <li>
+              <strong>Pyramid Schemes:</strong> Multi-level marketing or Ponzi
+              schemes
+            </li>
+            <li>
+              <strong>Weapons:</strong> Firearms, ammunition, or weapons of any
+              kind
+            </li>
+            <li>
+              <strong>Sanctioned Entities:</strong> Transactions with sanctioned
+              countries or individuals
+            </li>
+          </ul>
+          <p>
+            Violation may result in immediate account suspension, forfeiture of
+            funds, and reporting to regulatory authorities.
+          </p>
+        </div>
+      </div>
+
+      <div class="legal-card">
+        <div class="legal-card-header">
+          <h2><i class="fas fa-clock"></i> Account Suspension & Termination</h2>
+        </div>
+        <div class="legal-card-body">
+          <div class="legal-section">
+            <h3>1. Suspension</h3>
+            <p>We may suspend your account immediately if:</p>
+            <ul>
+              <li>We suspect fraudulent activity</li>
+              <li>We receive a legal request from authorities</li>
+              <li>You violate these Terms</li>
+              <li>Your account shows unusual activity patterns</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h3>2. Termination</h3>
+            <p>You may close your account at any time after:</p>
+            <ul>
+              <li>Withdrawing all funds</li>
+              <li>Settling all outstanding fees</li>
+              <li>Completing any pending transactions</li>
+            </ul>
+            <p>
+              We may terminate your account for repeated violations or severe
+              breaches of these Terms.
+            </p>
+          </div>
+
+          <div class="highlight-box">
+            <i class="fas fa-info-circle"></i>
+            <strong>Funds after Termination:</strong> Any remaining funds after
+            account closure will be returned to your verified bank account
+            within 30 days, less any applicable fees.
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-card">
+        <div class="legal-card-header">
+          <h2><i class="fas fa-scale-balanced"></i> Liability & Disclaimers</h2>
+        </div>
+        <div class="legal-card-body">
+          <div class="legal-section">
+            <h3>1. Limitation of Liability</h3>
+            <p>
+              To the maximum extent permitted by law, FEECENT shall not be
+              liable for:
+            </p>
+            <ul>
+              <li>Indirect, incidental, or consequential damages</li>
+              <li>Loss of profits or business opportunities</li>
+              <li>
+                Damages from unauthorized account access (unless caused by our
+                negligence)
+              </li>
+              <li>Third-party service interruptions</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h3>2. Our Liability Cap</h3>
+            <p>
+              Our total liability to you for any claim arising from these Terms
+              is limited to the amount of fees paid by you in the preceding 12
+              months or ₦500,000, whichever is lower.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h3>3. No Warranty</h3>
+            <p>
+              THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT
+              WARRANTIES OF ANY KIND. WE DO NOT WARRANT THAT THE SERVICE WILL BE
+              UNINTERRUPTED, ERROR-FREE, OR SECURE.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-card">
+        <div class="legal-card-header">
+          <h2><i class="fas fa-gavel"></i> Dispute Resolution</h2>
+        </div>
+        <div class="legal-card-body">
+          <div class="legal-section">
+            <h3>1. Informal Resolution</h3>
+            <p>
+              Before initiating any legal proceeding, you agree to contact our
+              support team at <strong>legal@feecent.online</strong> to resolve
+              disputes informally. We will work in good faith to resolve your
+              concerns.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h3>2. Governing Law</h3>
+            <p>
+              These Terms are governed by the laws of the Federal Republic of
+              Nigeria. Any disputes shall be subject to the exclusive
+              jurisdiction of the courts of Lagos State, Nigeria.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h3>3. Arbitration</h3>
+            <p>
+              Disputes not resolved informally shall be settled by binding
+              arbitration under the Lagos Court of Arbitration Rules. The
+              arbitration shall be conducted in English in Lagos, Nigeria.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-card">
+        <div class="legal-card-header">
+          <h2><i class="fas fa-envelope"></i> Contact Information</h2>
+        </div>
+        <div class="legal-card-body">
+          <p>For questions about these Terms, please contact us:</p>
+          <ul style="list-style: none; padding-left: 0">
+            <li>
+              <i
+                class="fas fa-envelope"
+                style="width: 30px; color: #6c47ff"
+              ></i>
+              legal@feecent.online
+            </li>
+            <li>
+              <i class="fas fa-headset" style="width: 30px; color: #6c47ff"></i>
+              support@feecent.online
+            </li>
+            <li>
+              <i
+                class="fas fa-map-marker-alt"
+                style="width: 30px; color: #6c47ff"
+              ></i>
+              Lagos, Nigeria
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>FEECENT</h4>
+            <a href="about.html">About Us</a><a href="features.html">Features</a
+            ><a href="pricing.html">Pricing</a>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <a href="support.html">Help Center</a><a href="faq.html">FAQ</a
+            ><a href="contact.html">Contact Us</a
+            ><a href="status.html">System Status</a>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="terms.html">Terms</a><a href="privacy.html">Privacy</a
+            ><a href="cookies.html">Cookies</a
+            ><a href="accessibility.html">Accessibility</a
+            ><a href="complaints.html">Complaints</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> FEECENT. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="./JAVASCRIPT/main.JS"></script>
+
+    <script>
+      // Back to top button
+      const backToTop = document.getElementById("backToTop");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          backToTop.style.display = "flex";
+        } else {
+          backToTop.style.display = "none";
+        }
+      });
+      backToTop.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>

@@ -1,587 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>FEECENT - Secure Digital Banking App</title>
-    <meta name="description" content="Download FEECENT Banking App - Secure, fast, and reliable mobile banking.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .navbar {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo i {
-            font-size: 28px;
-            color: #6b21a8;
-        }
-
-        .logo span {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1e293b;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #475569;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #6b21a8;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: #475569;
-        }
-
-        .hero {
-            padding-top: 100px;
-            padding-bottom: 60px;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: white;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .download-section {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .download-section h3 {
-            color: #1e293b;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .version-badge {
-            display: inline-block;
-            background: #e2e8f0;
-            color: #475569;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .download-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background: linear-gradient(135deg, #6b21a8 0%, #4c1d95 100%);
-            color: white;
-            text-decoration: none;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: all 0.3s;
-            width: 100%;
-            border: none;
-            cursor: pointer;
-            margin-bottom: 1rem;
-        }
-
-        .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(107, 33, 168, 0.3);
-        }
-
-        .download-info {
-            font-size: 0.8rem;
-            color: #64748b;
-            margin-top: 1rem;
-        }
-
-        .features-section {
-            background: white;
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #1e293b;
-            margin-bottom: 3rem;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            text-align: center;
-            padding: 2rem;
-            background: #f8fafc;
-            border-radius: 16px;
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #6b21a8 0%, #4c1d95 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-        }
-
-        .feature-icon i {
-            font-size: 32px;
-            color: white;
-        }
-
-        .feature-card h3 {
-            color: #1e293b;
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-card p {
-            color: #64748b;
-            line-height: 1.5;
-        }
-
-        .stats-section {
-            background: linear-gradient(135deg, #6b21a8 0%, #4c1d95 100%);
-            padding: 60px 0;
-            color: white;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer {
-            background: #0f172a;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: #94a3b8;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        .copyright {
-            color: #64748b;
-            font-size: 0.8rem;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal.show {
-            display: flex;
-        }
-
-        .modal-content {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            max-width: 400px;
-            text-align: center;
-        }
-
-        .modal-steps {
-            text-align: left;
-            background: #f8fafc;
-            padding: 1rem;
-            border-radius: 12px;
-            margin: 1rem 0;
-        }
-
-        .modal-btn {
-            background: linear-gradient(135deg, #6b21a8 0%, #4c1d95 100%);
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .hero-content h1 {
-                font-size: 2rem;
-                text-align: center;
-            }
-            
-            .hero-content p {
-                text-align: center;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="FEECENT - The smart payment APP for modern Africans. Send money, pay bills, save automatically, and earn rewards. 100% digital money management.">
+  <meta name="keywords" content="mobile money, digital transactions, money management, send money, savings, FEECENT">
+  <meta name="author" content="FEECENT">
+  <meta property="og:title" content="FEECENT - Smart Payment App">
+  <meta property="og:description" content="Take control of your finances with FEECENT. Instant transfers, automated savings, and secure transactions.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>FEECENT - Smart Mobile Payments</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./CSS/main.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-shield-alt"></i>
-                <span>FEECENT</span>
-            </div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#features">Features</a>
-                <a href="#download">Download</a>
-            </div>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
-
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <h1>Payment Reimagined for the Digital Age</h1>
-                    <p>Send money instantly, pay bills, save with high interest rates, and manage all your finances from one secure app.</p>
-                </div>
-                <div class="download-section" id="download">
-                    <h3>Get FEECENT App</h3>
-                    <div class="version-badge">Version 1.0.0</div>
-                    
-                    <button class="download-btn" id="downloadBtn">
-                        <i class="fab fa-android"></i> Download APK (38 MB)
-                    </button>
-                    
-                    <div class="download-info">
-                        <i class="fas fa-shield-alt"></i> Secure & Verified<br>
-                        <i class="fab fa-android"></i> Android 6.0+
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--<section class="features-section" id="features">
-        <div class="container">
-            <h2 class="section-title">Why Choose FEECENT?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-                    <h3>Instant Transfers</h3>
-                    <p>Send and receive money in real-time</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Bank-Grade Security</h3>
-                    <p>256-bit encryption & face verification</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-piggy-bank"></i></div>
-                    <h3>Saving Plans</h3>
-                    <p>Earn up to 5% interest</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
-                    <h3>24/7 Support</h3>
-                    <p>Round-the-clock customer support</p>
-                </div>
-            </div>
-        </div>
-    </section>-->
-
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div>
-                    <div class="stat-number">50K+</div>
-                    <div class="stat-label">Active Users</div>
-                </div>
-                <div>
-                    <div class="stat-number">₦2B+</div>
-                    <div class="stat-label">Transactions</div>
-                </div>
-                <div>
-                    <div class="stat-number">4.8⭐</div>
-                    <div class="stat-label">User Rating</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact Support</a>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 FEECENT. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <div class="modal" id="installModal">
-        <div class="modal-content">
-            <i class="fas fa-shield-alt" style="font-size: 48px; color: #6b21a8; margin-bottom: 1rem;"></i>
-            <h3>Installation Guide</h3>
-            <div class="modal-steps">
-                <ol style="margin-left: 1rem;">
-                    <li>Go to <strong>Settings → Security</strong></li>
-                    <li>Enable <strong>"Unknown Sources"</strong></li>
-                    <li>Open the downloaded APK file</li>
-                    <li>Tap <strong>"Install"</strong></li>
-                </ol>
-            </div>
-            <button class="modal-btn" onclick="closeModal()">Got it!</button>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-shield-alt"></i>
+        <span>FEECENT</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="security.html">Security</a>
+        <a href="support.html">Support</a>
+        <a href="download.html" class="btn btn-primary btn-sm">Download App</a>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
+  </nav>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!--<script>
-        // 🔴 REPLACE THIS WITH YOUR GOOGLE DRIVE FILE ID 🔴
-        // Your Google Drive File ID from step 3
-        const FILE_ID = "1bGvCSqMQR9u61xdBNyMnl-a64vf5sDH2";
-        
-        // Direct download URL
-        const APK_URL = `https://drive.google.com/uc?export=download&confirm=t&id=${FILE_ID}`;
-        
-        function toggleMobileMenu() {
-            const navbar = document.querySelector('.navbar');
-            navbar.classList.toggle('active');
-        }
-        
-        const downloadBtn = document.getElementById('downloadBtn');
-        const modal = document.getElementById('installModal');
-        
-        downloadBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            if (FILE_ID === "YOUR_GOOGLE_DRIVE_FILE_ID_HERE") {
-                alert('APK is being prepared. Please check back soon!');
-                return;
-            }
-            
-            // Create temporary link to download
-            const link = document.createElement('a');
-            link.href = APK_URL;
-            link.download = 'FEECENT-Bank-v1.0.apk';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-            // Show installation guide
-            setTimeout(() => {
-                modal.classList.add('show');
-            }, 1000);
-        });
-        
-        function closeModal() {
-            modal.classList.remove('show');
-        }
-        
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-        
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>-->
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Money that <span>moves with you</span></h1>
+        <p class="hero-description">FEECENT is the all-in-one payment system that helps you spend, save, and grow your money. No hidden fees, no minimum balance.</p>
+        <div class="hero-buttons">
+          <a href="download.html" class="btn btn-primary btn-large">
+            <i class="fab fa-google-play"></i> Download App
+          </a>
+          <a href="features.html" class="btn btn-outline btn-large">
+            Learn More <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number" data-target="500000">0</div>
+            <div class="stat-label">Active Users</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-target="1000000000">0</div>
+            <div class="stat-label">Transactions Processed</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-target="99.9">0</div>
+            <div class="stat-label">Uptime %</div>
+          </div>
+        </div>
+      </div>
+      <!--<div class="hero-image">
+        <img src="https://placehold.co/400x800/6b21a8/white?text=App+Preview" alt="FEECENT App Preview" data-src="https://placehold.co/400x800/6b21a8/white?text=App+Preview">
+      </div>-->
+      <div class="hero-image">
+  <div style="position: relative; max-width: 320px; margin: 0 auto;">
+    <!-- Optional device frame -->
+    <div style="position: relative; background: #000; border-radius: 36px; padding: 12px; box-shadow: 0 30px 50px rgba(0,0,0,0.2);">
+      <!-- Screen notch/speaker -->
+      <div style="position: absolute; top: 8px; left: 50%; transform: translateX(-50%); width: 120px; height: 24px; background: #111; border-radius: 20px; z-index: 2;"></div>
+      
+      <video autoplay muted loop playsinline style="width: 100%; border-radius: 28px; display: block;">
+        <source src="feecent-video.mp4" type="video/mp4">
+      </video>
+      
+      <!-- Home indicator -->
+      <div style="position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); width: 130px; height: 4px; background: rgba(255,255,255,0.3); border-radius: 2px;"></div>
+    </div>
+  </div>
+</div>
+    </div>
+  </section>
 
-    <script>
-    // OPTION 1: Google Drive with confirm parameter (bypasses warning)
-    const FILE_ID = "1bGvCSqMQR9u61xdBNyMnl-a64vf5sDH2";
-    //const DOWNLOAD_URL = `https://drive.google.com/uc?export=download&confirm=t&id=${FILE_ID}`;
+  <!-- Features Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why FEECENT is Built for You</span>
+        <h2 class="section-title">Everything your money needs in one place</h2>
+        <p class="section-subtitle">Powerful features to manage your money effortlessly</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Instant Transfers</h3>
+          <p>Send money to any bank in Nigeria instantly. No delays, no excuses.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-seedling"></i></div>
+          <h3>Automated Savings</h3>
+          <p>Save automatically with Harvest Plans, Fixed Savings, and Target Savings.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Bank-Grade Security</h3>
+          <p>256-bit encryption, biometric authentication, and 24/7 monitoring.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-coins"></i></div>
+          <h3>No Hidden Fees</h3>
+          <p>Transparent pricing. What you see is what you get.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-headset"></i></div>
+          <h3>24/7 Support</h3>
+          <p>Live chat support available whenever you need help.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Spending Insights</h3>
+          <p>Understand your spending habits with detailed analytics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Trust & Security Section -->
+  <section class="section" style="background: var(--gray-100);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Your Money, Protected</span>
+        <h2 class="section-title">Enterprise-grade security</h2>
+        <p class="section-subtitle">We take your security seriously</p>
+      </div>
+      <div class="security-badges">
+        <div class="security-badge">
+          <i class="fas fa-fingerprint"></i>
+          <span>Biometric Login</span>
+          <small>Face ID & Fingerprint</small>
+        </div>
+        <div class="security-badge">
+          <i class="fas fa-lock"></i>
+          <span>256-bit Encryption</span>
+          <small>Bank-level security</small>
+        </div>
+        <div class="security-badge">
+          <i class="fas fa-shield-virus"></i>
+          <span>Fraud Protection</span>
+          <small>24/7 monitoring</small>
+        </div>
+        <div class="security-badge">
+          <i class="fas fa-mobile-alt"></i>
+          <span>Device Binding</span>
+          <small>One device per account</small>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="security.html" class="btn btn-outline">Learn about security <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
 
-    const DOWNLOAD_URL = "https://dl.dropboxusercontent.com/scl/fi/exjeak0tfk6vd3c086l3t/FEECENT-App-20260529_141937.apk?rlkey=tpoezr5v6vcupz55v3wyeknls";
-    
-    // OPTION 2: GitHub Releases (Recommended)
-    // const DOWNLOAD_URL = "https://github.com/YOUR_USERNAME/feecent-app/releases/download/v1.0.0/FEECENT-Bank-v1.0.apk";
-    
-    // OPTION 3: Transfer.sh
-    // const DOWNLOAD_URL = "https://transfer.sh/abc123/FEECENT-Bank-v1.0.apk";
-    
-    const downloadBtn = document.getElementById('downloadBtn');
-    const modal = document.getElementById('installModal');
-    
-    downloadBtn.addEventListener('click', async function(e) {
-        e.preventDefault();
-        
-        // Show loading state
-        const originalText = downloadBtn.innerHTML;
-        downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing download...';
-        downloadBtn.disabled = true;
-        
-        try {
-            // For Google Drive with confirm parameter - direct download
-            const link = document.createElement('a');
-            link.href = DOWNLOAD_URL;
-            link.download = 'FEECENT-Bank-v1.0.apk';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-            // Show installation guide
-            setTimeout(() => {
-                modal.classList.add('show');
-            }, 1500);
-        } catch (error) {
-            console.error('Download failed:', error);
-            // Fallback: open in new window
-            window.open(DOWNLOAD_URL, '_blank');
-        } finally {
-            downloadBtn.innerHTML = originalText;
-            downloadBtn.disabled = false;
-        }
-    });
-    
-    function closeModal() {
-        modal.classList.remove('show');
-    }
-    
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
-</script>
+  <!-- CTA Section -->
+  <section class="section" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white;">
+    <div class="container text-center">
+      <h2 style="color: white;">Ready to take control of your finances?</h2>
+      <p style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">Join thousands of users who trust FEECENT for their daily needs.</p>
+      <a href="download.html" class="btn btn-secondary btn-large">
+        <i class="fab fa-google-play"></i> Download the App
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>FEECENT</h4>
+          <a href="about.html">About Us</a>
+          <a href="features.html">Features</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="security.html">Security</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="support.html">Help Center</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="status.html">System Status</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="cookies.html">Cookie Policy</a>
+          <a href="accessibility.html">Accessibility</a>
+          <a href="complaints.html">Complaints</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+          <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> FEECENT. All rights reserved.</p>
+        <p>FEECENT is a payment system application. Banking services provided by partner banks.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./JAVASCRIPT/main.JS"></script>
 </body>
 </html>
