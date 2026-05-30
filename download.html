@@ -1,390 +1,414 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <title>FEECENT - Secure Digital Money App</title>
-    <meta name="description" content="Download FEECENT App - Secure, fast, and reliable mobile Money management.">
+    <meta
+      name="description"
+      content="Download FEECENT App - Secure, fast, and reliable mobile Money management."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./CSS/main.css" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
 
-        .navbar {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
+      .navbar {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
 
-        .logo i {
-            font-size: 28px;
-            color: #6b21a8;
-        }
+      .logo i {
+        font-size: 28px;
+        color: #6b21a8;
+      }
 
-        .logo span {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1e293b;
-        }
+      .logo span {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1e293b;
+      }
 
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #475569;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #6b21a8;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #475569;
+      }
+
+      .hero {
+        padding-top: 100px;
+        padding-bottom: 60px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: white;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .download-section {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .download-section h3 {
+        color: #1e293b;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .version-badge {
+        display: inline-block;
+        background: #e2e8f0;
+        color: #475569;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .download-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background: linear-gradient(135deg, #6b21a8 0%, #4c1d95 100%);
+        color: white;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: all 0.3s;
+        width: 100%;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 1rem;
+      }
+
+      .download-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(107, 33, 168, 0.3);
+      }
+
+      .download-info {
+        font-size: 0.8rem;
+        color: #64748b;
+        margin-top: 1rem;
+      }
+
+      .features-section {
+        background: white;
+        padding: 80px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #1e293b;
+        margin-bottom: 3rem;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .feature-card {
+        text-align: center;
+        padding: 2rem;
+        background: #f8fafc;
+        border-radius: 16px;
+        transition: transform 0.3s;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #6b21a8 0%, #4c1d95 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+      }
+
+      .feature-icon i {
+        font-size: 32px;
+        color: white;
+      }
+
+      .feature-card h3 {
+        color: #1e293b;
+        margin-bottom: 0.5rem;
+      }
+
+      .feature-card p {
+        color: #64748b;
+        line-height: 1.5;
+      }
+
+      .stats-section {
+        background: linear-gradient(135deg, #6b21a8 0%, #4c1d95 100%);
+        padding: 60px 0;
+        color: white;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+      }
+
+      .footer {
+        background: #0f172a;
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .footer-links a {
+        color: #94a3b8;
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        color: white;
+      }
+
+      .copyright {
+        color: #64748b;
+        font-size: 0.8rem;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 2000;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal.show {
+        display: flex;
+      }
+
+      .modal-content {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      .modal-steps {
+        text-align: left;
+        background: #f8fafc;
+        padding: 1rem;
+        border-radius: 12px;
+        margin: 1rem 0;
+      }
+
+      .modal-btn {
+        background: linear-gradient(135deg, #6b21a8 0%, #4c1d95 100%);
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      @media (max-width: 768px) {
         .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #475569;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #6b21a8;
+          display: none;
         }
 
         .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: #475569;
-        }
-
-        .hero {
-            padding-top: 100px;
-            padding-bottom: 60px;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+          display: block;
         }
 
         .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+          grid-template-columns: 1fr;
+          gap: 2rem;
         }
 
         .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: white;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
+          font-size: 2rem;
+          text-align: center;
         }
 
         .hero-content p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .download-section {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .download-section h3 {
-            color: #1e293b;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .version-badge {
-            display: inline-block;
-            background: #e2e8f0;
-            color: #475569;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .download-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background: linear-gradient(135deg, #6b21a8 0%, #4c1d95 100%);
-            color: white;
-            text-decoration: none;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: all 0.3s;
-            width: 100%;
-            border: none;
-            cursor: pointer;
-            margin-bottom: 1rem;
-        }
-
-        .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(107, 33, 168, 0.3);
-        }
-
-        .download-info {
-            font-size: 0.8rem;
-            color: #64748b;
-            margin-top: 1rem;
-        }
-
-        .features-section {
-            background: white;
-            padding: 80px 0;
+          text-align: center;
         }
 
         .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #1e293b;
-            margin-bottom: 3rem;
+          font-size: 1.8rem;
         }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            text-align: center;
-            padding: 2rem;
-            background: #f8fafc;
-            border-radius: 16px;
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #6b21a8 0%, #4c1d95 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-        }
-
-        .feature-icon i {
-            font-size: 32px;
-            color: white;
-        }
-
-        .feature-card h3 {
-            color: #1e293b;
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-card p {
-            color: #64748b;
-            line-height: 1.5;
-        }
-
-        .stats-section {
-            background: linear-gradient(135deg, #6b21a8 0%, #4c1d95 100%);
-            padding: 60px 0;
-            color: white;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer {
-            background: #0f172a;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: #94a3b8;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        .copyright {
-            color: #64748b;
-            font-size: 0.8rem;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal.show {
-            display: flex;
-        }
-
-        .modal-content {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            max-width: 400px;
-            text-align: center;
-        }
-
-        .modal-steps {
-            text-align: left;
-            background: #f8fafc;
-            padding: 1rem;
-            border-radius: 12px;
-            margin: 1rem 0;
-        }
-
-        .modal-btn {
-            background: linear-gradient(135deg, #6b21a8 0%, #4c1d95 100%);
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .hero-content h1 {
-                font-size: 2rem;
-                text-align: center;
-            }
-            
-            .hero-content p {
-                text-align: center;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-shield-alt"></i>
-                <span>FEECENT</span>
-            </div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#features">Features</a>
-                <a href="#download">Download</a>
-            </div>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
+      <div class="container">
+        <a href="index.html" class="logo"
+          ><i class="fas fa-shield-alt"></i><span>FEECENT</span></a
+        >
+        <div class="nav-links">
+          <a href="index.html">Home</a><a href="features.html">Features</a
+          ><a href="pricing.html">Pricing</a>
+          <a href="security.html">Security</a><a href="support.html">Support</a>
+          <a href="download.html" class="btn btn-primary btn-sm"
+            >Download App</a
+          >
         </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </nav>
 
     <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <h1>Payment Reimagined for the Digital Age</h1>
-                    <p>Send money instantly, pay bills, save with high interest rates, and manage all your finances from one secure app.</p>
-                </div>
-                <div class="download-section" id="download">
-                    <h3>Get FEECENT App</h3>
-                    <div class="version-badge">Version 1.0.0</div>
-                    
-                    <button class="download-btn" id="downloadBtn">
-                        <i class="fab fa-android"></i> Download APK (38 MB)
-                    </button>
-                    
-                    <div class="download-info">
-                        <i class="fas fa-shield-alt"></i> Secure & Verified<br>
-                        <i class="fab fa-android"></i> Android 6.0+
-                    </div>
-                </div>
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <h1>Payment Reimagined for the Digital Age</h1>
+            <p>
+              Send money instantly, pay bills, save with high interest rates,
+              and manage all your finances from one secure app.
+            </p>
+          </div>
+          <div class="download-section" id="download">
+            <h3>Get FEECENT App</h3>
+            <div class="version-badge">Version 1.0.0</div>
+
+            <button class="download-btn" id="downloadBtn">
+              <i class="fab fa-android"></i> Download APK (38 MB)
+            </button>
+
+            <div class="download-info">
+              <i class="fas fa-shield-alt"></i> Secure & Verified<br />
+              <i class="fab fa-android"></i> Android 6.0+
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!--<section class="features-section" id="features">
@@ -416,55 +440,63 @@
     </section>-->
 
     <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div>
-                    <div class="stat-number">50K+</div>
-                    <div class="stat-label">Active Users</div>
-                </div>
-                <div>
-                    <div class="stat-number">₦2B+</div>
-                    <div class="stat-label">Transactions</div>
-                </div>
-                <div>
-                    <div class="stat-number">4.8⭐</div>
-                    <div class="stat-label">User Rating</div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="stats-grid">
+          <div>
+            <div class="stat-number">50K+</div>
+            <div class="stat-label">Active Users</div>
+          </div>
+          <div>
+            <div class="stat-number">₦2B+</div>
+            <div class="stat-label">Transactions</div>
+          </div>
+          <div>
+            <div class="stat-number">4.8⭐</div>
+            <div class="stat-label">User Rating</div>
+          </div>
         </div>
+      </div>
     </section>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact Support</a>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 FEECENT. All rights reserved.</p>
-            </div>
+      <div class="container">
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Support</a>
         </div>
+        <div class="copyright">
+          <p>&copy; 2024 FEECENT. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <div class="modal" id="installModal">
-        <div class="modal-content">
-            <i class="fas fa-shield-alt" style="font-size: 48px; color: #6b21a8; margin-bottom: 1rem;"></i>
-            <h3>Installation Guide</h3>
-            <div class="modal-steps">
-                <ol style="margin-left: 1rem;">
-                    <li>Go to <strong>Settings → Security</strong></li>
-                    <li>Enable <strong>"Unknown Sources"</strong></li>
-                    <li>Open the downloaded APK file</li>
-                    <li>Tap <strong>"Install"</strong></li>
-                </ol>
-            </div>
-            <button class="modal-btn" onclick="closeModal()">Got it!</button>
+      <div class="modal-content">
+        <i
+          class="fas fa-shield-alt"
+          style="font-size: 48px; color: #6b21a8; margin-bottom: 1rem"
+        ></i>
+        <h3>Installation Guide</h3>
+        <div class="modal-steps">
+          <ol style="margin-left: 1rem">
+            <li>Go to <strong>Settings → Security</strong></li>
+            <li>Enable <strong>"Unknown Sources"</strong></li>
+            <li>Open the downloaded APK file</li>
+            <li>Tap <strong>"Install"</strong></li>
+          </ol>
         </div>
+        <button class="modal-btn" onclick="closeModal()">Got it!</button>
+      </div>
     </div>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script src="./JAVASCRIPT/main.JS"></script>
+
     <!--<script>
         // 🔴 REPLACE THIS WITH YOUR GOOGLE DRIVE FILE ID 🔴
         // Your Google Drive File ID from step 3
@@ -526,62 +558,63 @@
     </script>-->
 
     <script>
-    // OPTION 1: Google Drive with confirm parameter (bypasses warning)
-    const FILE_ID = "1bGvCSqMQR9u61xdBNyMnl-a64vf5sDH2";
-    //const DOWNLOAD_URL = `https://drive.google.com/uc?export=download&confirm=t&id=${FILE_ID}`;
+      // OPTION 1: Google Drive with confirm parameter (bypasses warning)
+      const FILE_ID = "1bGvCSqMQR9u61xdBNyMnl-a64vf5sDH2";
+      //const DOWNLOAD_URL = `https://drive.google.com/uc?export=download&confirm=t&id=${FILE_ID}`;
 
+      const DOWNLOAD_URL =
+        "https://dl.dropboxusercontent.com/scl/fi/exjeak0tfk6vd3c086l3t/FEECENT-App-20260529_141937.apk?rlkey=tpoezr5v6vcupz55v3wyeknls";
 
-    const DOWNLOAD_URL = "https://dl.dropboxusercontent.com/scl/fi/exjeak0tfk6vd3c086l3t/FEECENT-App-20260529_141937.apk?rlkey=tpoezr5v6vcupz55v3wyeknls";
-    
-    // OPTION 2: GitHub Releases (Recommended)
-    // const DOWNLOAD_URL = "https://github.com/YOUR_USERNAME/feecent-app/releases/download/v1.0.0/FEECENT-Bank-v1.0.apk";
-    
-    // OPTION 3: Transfer.sh
-    // const DOWNLOAD_URL = "https://transfer.sh/abc123/FEECENT-Bank-v1.0.apk";
-    
-    const downloadBtn = document.getElementById('downloadBtn');
-    const modal = document.getElementById('installModal');
-    
-    downloadBtn.addEventListener('click', async function(e) {
+      // OPTION 2: GitHub Releases (Recommended)
+      // const DOWNLOAD_URL = "https://github.com/YOUR_USERNAME/feecent-app/releases/download/v1.0.0/FEECENT-Bank-v1.0.apk";
+
+      // OPTION 3: Transfer.sh
+      // const DOWNLOAD_URL = "https://transfer.sh/abc123/FEECENT-Bank-v1.0.apk";
+
+      const downloadBtn = document.getElementById("downloadBtn");
+      const modal = document.getElementById("installModal");
+
+      downloadBtn.addEventListener("click", async function (e) {
         e.preventDefault();
-        
+
         // Show loading state
         const originalText = downloadBtn.innerHTML;
-        downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing download...';
+        downloadBtn.innerHTML =
+          '<i class="fas fa-spinner fa-spin"></i> Preparing download...';
         downloadBtn.disabled = true;
-        
+
         try {
-            // For Google Drive with confirm parameter - direct download
-            const link = document.createElement('a');
-            link.href = DOWNLOAD_URL;
-            link.download = 'FEECENT-Bank-v1.0.apk';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-            // Show installation guide
-            setTimeout(() => {
-                modal.classList.add('show');
-            }, 1500);
+          // For Google Drive with confirm parameter - direct download
+          const link = document.createElement("a");
+          link.href = DOWNLOAD_URL;
+          link.download = "FEECENT-Bank-v1.0.apk";
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+
+          // Show installation guide
+          setTimeout(() => {
+            modal.classList.add("show");
+          }, 1500);
         } catch (error) {
-            console.error('Download failed:', error);
-            // Fallback: open in new window
-            window.open(DOWNLOAD_URL, '_blank');
+          console.error("Download failed:", error);
+          // Fallback: open in new window
+          window.open(DOWNLOAD_URL, "_blank");
         } finally {
-            downloadBtn.innerHTML = originalText;
-            downloadBtn.disabled = false;
+          downloadBtn.innerHTML = originalText;
+          downloadBtn.disabled = false;
         }
-    });
-    
-    function closeModal() {
-        modal.classList.remove('show');
-    }
-    
-    modal.addEventListener('click', function(e) {
+      });
+
+      function closeModal() {
+        modal.classList.remove("show");
+      }
+
+      modal.addEventListener("click", function (e) {
         if (e.target === modal) {
-            closeModal();
+          closeModal();
         }
-    });
-</script>
-</body>
+      });
+    </script>
+  </body>
 </html>
