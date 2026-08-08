@@ -1,5 +1,5 @@
 // ============================================
-// FEECENT BANK - Main JavaScript
+// FEECENT - Main JavaScript
 // ============================================
 
 (function () {

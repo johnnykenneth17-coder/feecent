@@ -6,10 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
-    <title>FEECENT - Secure Digital Money App</title>
+    <title>FEECENT - Secure Bill Payment & Money App</title>
     <meta
       name="description"
-      content="Download FEECENT App - Secure, fast, and reliable mobile Money management."
+      content="Download FEECENT App - Secure, fast, and reliable bill payments and money transfers."
     />
 
     <link rel="stylesheet" href="./CSS/download.css" />
@@ -379,10 +379,10 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
-            <h1>Payment Reimagined for the Digital Age</h1>
+            <h1>Bill Payments Reimagined for the Digital Age</h1>
             <p>
-              Send money instantly, pay bills, save with high interest rates,
-              and manage all your finances from one secure app.
+              Pay bills, send money instantly, save automatically, and manage
+              your everyday finances from one secure app.
             </p>
           </div>
           <div class="download-section" id="download">
@@ -413,7 +413,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Bank-Grade Security</h3>
+                    <h3>Bank-Grade Encryption</h3>
                     <p>256-bit encryption & face verification</p>
                 </div>
                 <div class="feature-card">
@@ -458,6 +458,7 @@
         </div>
         <div class="copyright">
           <p>&copy; 2024 FEECENT. All rights reserved.</p>
+          <p style="font-size: 0.75rem; color: #64748b; max-width: 600px; margin: 0.5rem auto 0;">FEECENT is a bill payment and money transfer app, not a bank. Wallet, virtual account, and money transfer services are powered by our licensed payment technology partner in compliance with CBN regulations.</p>
         </div>
       </div>
     </footer>
@@ -515,7 +516,7 @@
             // Create temporary link to download
             const link = document.createElement('a');
             link.href = APK_URL;
-            link.download = 'FEECENT-Bank-v1.0.apk';
+            link.download = 'FEECENT-App-v1.0.apk';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -557,10 +558,10 @@
         "https://dl.dropboxusercontent.com/scl/fi/i41v3mw8yfnarnelucok5/FEECENT-App-20260802_103111.apk?rlkey=24d6li7qicy2r2199cvt7sl6y";
 
       // OPTION 2: GitHub Releases (Recommended)
-      // const DOWNLOAD_URL = "https://github.com/YOUR_USERNAME/feecent-app/releases/download/v1.0.0/FEECENT-Bank-v1.0.apk";
+      // const DOWNLOAD_URL = "https://github.com/YOUR_USERNAME/feecent-app/releases/download/v1.0.0/FEECENT-App-v1.0.apk";
 
       // OPTION 3: Transfer.sh
-      // const DOWNLOAD_URL = "https://transfer.sh/abc123/FEECENT-Bank-v1.0.apk";
+      // const DOWNLOAD_URL = "https://transfer.sh/abc123/FEECENT-App-v1.0.apk";
 
    
       const downloadBtn = document.getElementById("downloadBtn");
@@ -579,7 +580,7 @@
           // For Google Drive with confirm parameter - direct download
           const link = document.createElement("a");
           link.href = DOWNLOAD_URL;
-          link.download = "FEECENT-Bank-v1.0.apk";
+          link.download = "FEECENT-App-v1.0.apk";
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
